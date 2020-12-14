@@ -1,0 +1,445 @@
+{
+    "RedshiftCarPaint": {
+        "RedshiftCarPaint": [
+            "VRayCarPaintMtl"
+        ], 
+        "base_color": [
+            "base_color", 
+            ""
+        ], 
+        "base_colorB": [
+            "base_colorB", 
+            ""
+        ], 
+        "base_colorG": [
+            "base_colorG", 
+            ""
+        ], 
+        "base_colorR": [
+            "base_colorR", 
+            ""
+        ], 
+        "clearcoat_color": [
+            "coat_color", 
+            ""
+        ], 
+        "clearcoat_colorB": [
+            "coat_colorB", 
+            ""
+        ], 
+        "clearcoat_colorG": [
+            "coat_colorG", 
+            ""
+        ], 
+        "clearcoat_colorR": [
+            "coat_colorR", 
+            ""
+        ], 
+        "clearcoat_gloss": [
+            "coat_glossiness", 
+            ""
+        ], 
+        "clearcoat_weight": [
+            "coat_strength", 
+            ""
+        ], 
+        "flake_color": [
+            "flake_color", 
+            ""
+        ], 
+        "flake_colorB": [
+            "flake_colorB", 
+            ""
+        ], 
+        "flake_colorG": [
+            "flake_colorG", 
+            ""
+        ], 
+        "flake_colorR": [
+            "flake_colorR", 
+            ""
+        ], 
+        "flake_gloss": [
+            "flake_glossiness", 
+            ""
+        ], 
+        "flake_scale": [
+            "flake_scale", 
+            ""
+        ], 
+        "outApiClassification": [
+            "outApiClassification", 
+            ""
+        ], 
+        "outApiType": [
+            "outApiType", 
+            ""
+        ], 
+        "outColor": [
+            "outColor", 
+            ""
+        ], 
+        "outColorB": [
+            "outColorB", 
+            ""
+        ], 
+        "outColorG": [
+            "outColorG", 
+            ""
+        ], 
+        "outColorR": [
+            "outColorR", 
+            ""
+        ], 
+        "spec_gloss": [
+            "base_glossiness", 
+            ""
+        ], 
+        "spec_weight": [
+            "base_reflection", 
+            ""
+        ]
+    }, 
+    "RedshiftMaterial": {
+        "RedshiftMaterial": [
+            "VRayMtl"
+        ], 
+        "bump_input": [
+            "bumpMap", 
+            ""
+        ], 
+        "bump_inputB": [
+            "bumpMapB", 
+            ""
+        ], 
+        "bump_inputG": [
+            "bumpMapG", 
+            ""
+        ], 
+        "bump_inputR": [
+            "bumpMapR", 
+            ""
+        ], 
+        "diffuse_color": [
+            "diffuseColor", 
+            ""
+        ], 
+        "diffuse_colorB": [
+            "diffuseColorB", 
+            ""
+        ], 
+        "diffuse_colorG": [
+            "diffuseColorG", 
+            ""
+        ], 
+        "diffuse_colorR": [
+            "diffuseColorR", 
+            ""
+        ], 
+        "diffuse_roughness": [
+            "roughnessAmount", 
+            ""
+        ], 
+        "diffuse_weight": [
+            "diffuseColorAmount", 
+            ""
+        ], 
+        "outApiClassification": [
+            "outApiClassification", 
+            ""
+        ], 
+        "outApiType": [
+            "outApiType", 
+            ""
+        ], 
+        "outColor": [
+            "outColor", 
+            ""
+        ], 
+        "outColorB": [
+            "outColorB", 
+            ""
+        ], 
+        "outColorG": [
+            "outColorG", 
+            ""
+        ], 
+        "outColorR": [
+            "outColorR", 
+            ""
+        ], 
+        "refl_color": [
+            "reflectionColor", 
+            ""
+        ], 
+        "refl_colorB": [
+            "reflectionColorB", 
+            ""
+        ], 
+        "refl_colorG": [
+            "reflectionColorG", 
+            ""
+        ], 
+        "refl_colorR": [
+            "reflectionColorR", 
+            ""
+        ], 
+        "refl_metalness": [
+            "metalness", 
+            ""
+        ], 
+        "refl_roughness": [
+            "reflectionGlossiness", 
+            "Inverse"
+        ], 
+        "refl_weight": [
+            "reflectionColorAmount", 
+            ""
+        ], 
+        "refr_color": [
+            "refractionColor", 
+            ""
+        ], 
+        "refr_colorB": [
+            "refractionColorB", 
+            ""
+        ], 
+        "refr_colorG": [
+            "refractionColorG", 
+            ""
+        ], 
+        "refr_colorR": [
+            "refractionColorR", 
+            ""
+        ], 
+        "refr_ior": [
+            "refractionIOR", 
+            ""
+        ], 
+        "refr_roughness": [
+            "refractionGlossiness", 
+            "Inverse"
+        ], 
+        "refr_weight": [
+            "refractionColorAmount", 
+            ""
+        ]
+    }, 
+    "RedshiftMaterialBlender": {
+        "RedshiftMaterialBlender": [
+            "VRayBlendMtl"
+        ], 
+        "baseColor": [
+            "base_material", 
+            ""
+        ], 
+        "baseColorB": [
+            "base_materialB", 
+            ""
+        ], 
+        "baseColorG": [
+            "base_materialG", 
+            ""
+        ], 
+        "baseColorR": [
+            "base_materialR", 
+            ""
+        ], 
+        "blendColor1": [
+            "blend_amount_0", 
+            ""
+        ], 
+        "blendColor1B": [
+            "blend_amount_0B", 
+            ""
+        ], 
+        "blendColor1G": [
+            "blend_amount_0G", 
+            ""
+        ], 
+        "blendColor1R": [
+            "blend_amount_0R", 
+            ""
+        ], 
+        "blendColor2": [
+            "blend_amount_1", 
+            ""
+        ], 
+        "blendColor2B": [
+            "blend_amount_1B", 
+            ""
+        ], 
+        "blendColor2G": [
+            "blend_amount_1G", 
+            ""
+        ], 
+        "blendColor2R": [
+            "blend_amount_1R", 
+            ""
+        ], 
+        "blendColor3": [
+            "blend_amount_2", 
+            ""
+        ], 
+        "blendColor3B": [
+            "blend_amount_2B", 
+            ""
+        ], 
+        "blendColor3G": [
+            "blend_amount_2G", 
+            ""
+        ], 
+        "blendColor3R": [
+            "blend_amount_2R", 
+            ""
+        ], 
+        "blendColor4": [
+            "blend_amount_3", 
+            ""
+        ], 
+        "blendColor4B": [
+            "blend_amount_3B", 
+            ""
+        ], 
+        "blendColor4G": [
+            "blend_amount_3G", 
+            ""
+        ], 
+        "blendColor4R": [
+            "blend_amount_3R", 
+            ""
+        ], 
+        "blendColor5": [
+            "blend_amount_4", 
+            ""
+        ], 
+        "blendColor5B": [
+            "blend_amount_4B", 
+            ""
+        ], 
+        "blendColor5G": [
+            "blend_amount_4G", 
+            ""
+        ], 
+        "blendColor5R": [
+            "blend_amount_4R", 
+            ""
+        ], 
+        "blendColor6": [
+            "blend_amount_5", 
+            ""
+        ], 
+        "blendColor6B": [
+            "blend_amount_5B", 
+            ""
+        ], 
+        "blendColor6G": [
+            "blend_amount_5G", 
+            ""
+        ], 
+        "blendColor6R": [
+            "blend_amount_5R", 
+            ""
+        ], 
+        "layerColor1": [
+            "coat_material_0", 
+            ""
+        ], 
+        "layerColor1B": [
+            "coat_material_0B", 
+            ""
+        ], 
+        "layerColor1G": [
+            "coat_material_0G", 
+            ""
+        ], 
+        "layerColor1R": [
+            "coat_material_0R", 
+            ""
+        ], 
+        "layerColor2": [
+            "coat_material_1", 
+            ""
+        ], 
+        "layerColor2B": [
+            "coat_material_1B", 
+            ""
+        ], 
+        "layerColor2G": [
+            "coat_material_1G", 
+            ""
+        ], 
+        "layerColor2R": [
+            "coat_material_1R", 
+            ""
+        ], 
+        "layerColor3": [
+            "coat_material_2", 
+            ""
+        ], 
+        "layerColor3B": [
+            "coat_material_2B", 
+            ""
+        ], 
+        "layerColor3G": [
+            "coat_material_2G", 
+            ""
+        ], 
+        "layerColor3R": [
+            "coat_material_2R", 
+            ""
+        ], 
+        "layerColor4": [
+            "coat_material_3", 
+            ""
+        ], 
+        "layerColor4B": [
+            "coat_material_3B", 
+            ""
+        ], 
+        "layerColor4G": [
+            "coat_material_3G", 
+            ""
+        ], 
+        "layerColor4R": [
+            "coat_material_3R", 
+            ""
+        ], 
+        "layerColor5": [
+            "coat_material_4", 
+            ""
+        ], 
+        "layerColor5B": [
+            "coat_material_4B", 
+            ""
+        ], 
+        "layerColor5G": [
+            "coat_material_4G", 
+            ""
+        ], 
+        "layerColor5R": [
+            "coat_material_4R", 
+            ""
+        ], 
+        "layerColor6": [
+            "coat_material_5", 
+            ""
+        ], 
+        "layerColor6B": [
+            "coat_material_5B", 
+            ""
+        ], 
+        "layerColor6G": [
+            "coat_material_5G", 
+            ""
+        ], 
+        "layerColor6R": [
+            "coat_material_5R", 
+            ""
+        ]
+    }, 
+    "renderer": [
+        "redshift", 
+        "vray"
+    ]
+}

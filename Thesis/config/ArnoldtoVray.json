@@ -1,0 +1,429 @@
+{
+    "aiCarPaint": {
+        "aiCarPaint": [
+            "VRayCarPaintMtl"
+        ], 
+        "baseColor": [
+            "base_color", 
+            ""
+        ], 
+        "baseColorB": [
+            "base_colorB", 
+            ""
+        ], 
+        "baseColorG": [
+            "base_colorG", 
+            ""
+        ], 
+        "baseColorR": [
+            "base_colorR", 
+            ""
+        ], 
+        "baseRoughness": [
+            "base_glossiness", 
+            "Inverse"
+        ], 
+        "coat": [
+            "coat_strength", 
+            ""
+        ], 
+        "coatColor": [
+            "coat_color", 
+            ""
+        ], 
+        "coatColorB": [
+            "coat_colorB", 
+            ""
+        ], 
+        "coatColorG": [
+            "coat_colorG", 
+            ""
+        ], 
+        "coatColorR": [
+            "coat_colorR", 
+            ""
+        ], 
+        "coatRoughness": [
+            "coat_glossiness", 
+            "Inverse"
+        ], 
+        "flakeColor": [
+            "flake_color", 
+            ""
+        ], 
+        "flakeColorB": [
+            "flake_colorB", 
+            ""
+        ], 
+        "flakeColorG": [
+            "flake_colorG", 
+            ""
+        ], 
+        "flakeColorR": [
+            "flake_colorR", 
+            ""
+        ], 
+        "flakeDensity": [
+            "flake_density", 
+            ""
+        ], 
+        "flakeRoughness": [
+            "flake_glossiness", 
+            "Inverse"
+        ], 
+        "flakeScale": [
+            "flake_scale", 
+            ""
+        ], 
+        "outColor": [
+            "outColor", 
+            ""
+        ], 
+        "outColorB": [
+            "outColorB", 
+            ""
+        ], 
+        "outColorG": [
+            "outColorG", 
+            ""
+        ], 
+        "outColorR": [
+            "outColorR", 
+            ""
+        ], 
+        "outTransparency": [
+            "outTransparency", 
+            ""
+        ], 
+        "outTransparencyB": [
+            "outTransparencyB", 
+            ""
+        ], 
+        "outTransparencyG": [
+            "outTransparencyG", 
+            ""
+        ], 
+        "outTransparencyR": [
+            "outTransparencyR", 
+            ""
+        ], 
+        "specular": [
+            "base_reflection", 
+            ""
+        ]
+    }, 
+    "aiLayerShader": {
+        "aiLayerShader": [
+            "VRayBlendMtl"
+        ], 
+        "input1": [
+            "coat_material_0", 
+            ""
+        ], 
+        "input1B": [
+            "coat_material_0B", 
+            ""
+        ], 
+        "input1G": [
+            "coat_material_0G", 
+            ""
+        ], 
+        "input1R": [
+            "coat_material_0R", 
+            ""
+        ], 
+        "input2": [
+            "coat_material_1", 
+            ""
+        ], 
+        "input2B": [
+            "coat_material_1B", 
+            ""
+        ], 
+        "input2G": [
+            "coat_material_1G", 
+            ""
+        ], 
+        "input2R": [
+            "coat_material_1R", 
+            ""
+        ], 
+        "input3": [
+            "coat_material_2", 
+            ""
+        ], 
+        "input3B": [
+            "coat_material_2B", 
+            ""
+        ], 
+        "input3G": [
+            "coat_material_2G", 
+            ""
+        ], 
+        "input3R": [
+            "coat_material_2R", 
+            ""
+        ], 
+        "input4": [
+            "coat_material_3", 
+            ""
+        ], 
+        "input4B": [
+            "coat_material_3B", 
+            ""
+        ], 
+        "input4G": [
+            "coat_material_3G", 
+            ""
+        ], 
+        "input4R": [
+            "coat_material_3R", 
+            ""
+        ], 
+        "input5": [
+            "coat_material_4", 
+            ""
+        ], 
+        "input5B": [
+            "coat_material_4B", 
+            ""
+        ], 
+        "input5G": [
+            "coat_material_4G", 
+            ""
+        ], 
+        "input5R": [
+            "coat_material_4R", 
+            ""
+        ], 
+        "input6": [
+            "coat_material_5", 
+            ""
+        ], 
+        "input6B": [
+            "coat_material_5B", 
+            ""
+        ], 
+        "input6G": [
+            "coat_material_5G", 
+            ""
+        ], 
+        "input6R": [
+            "coat_material_5R", 
+            ""
+        ], 
+        "input7": [
+            "coat_material_6", 
+            ""
+        ], 
+        "input7B": [
+            "coat_material_6B", 
+            ""
+        ], 
+        "input7G": [
+            "coat_material_6G", 
+            ""
+        ], 
+        "input7R": [
+            "coat_material_6R", 
+            ""
+        ], 
+        "input8": [
+            "coat_material_7", 
+            ""
+        ], 
+        "input8B": [
+            "coat_material_7B", 
+            ""
+        ], 
+        "input8G": [
+            "coat_material_7G", 
+            ""
+        ], 
+        "input8R": [
+            "coat_material_7R", 
+            ""
+        ], 
+        "mix1": [
+            "blend_amount_0", 
+            ""
+        ], 
+        "mix2": [
+            "blend_amount_1", 
+            ""
+        ], 
+        "mix3": [
+            "blend_amount_2", 
+            ""
+        ], 
+        "mix4": [
+            "blend_amount_3", 
+            ""
+        ], 
+        "mix5": [
+            "blend_amount_4", 
+            ""
+        ], 
+        "mix6": [
+            "blend_amount_5", 
+            ""
+        ], 
+        "mix7": [
+            "blend_amount_6", 
+            ""
+        ], 
+        "mix8": [
+            "blend_amount_7", 
+            ""
+        ]
+    }, 
+    "aiStandardSurface": {
+        "aiStandardSurface": [
+            "VRayMtl"
+        ], 
+        "base": [
+            "diffuseColorAmount", 
+            ""
+        ], 
+        "baseColor": [
+            "diffuseColor", 
+            ""
+        ], 
+        "baseColorB": [
+            "diffuseColorB", 
+            ""
+        ], 
+        "baseColorG": [
+            "diffuseColorG", 
+            ""
+        ], 
+        "baseColorR": [
+            "diffuseColorR", 
+            ""
+        ], 
+        "diffuseRoughness": [
+            "roughnessAmount", 
+            ""
+        ], 
+        "metalness": [
+            "metalness", 
+            ""
+        ], 
+        "normalCamera": [
+            "bumpMap", 
+            ""
+        ], 
+        "normalCameraX": [
+            "bumpMapR", 
+            ""
+        ], 
+        "normalCameraY": [
+            "bumpMapG", 
+            ""
+        ], 
+        "normalCameraZ": [
+            "bumpMapB", 
+            ""
+        ], 
+        "opacity": [
+            "opacityMap", 
+            ""
+        ], 
+        "opacityB": [
+            "opacityMapB", 
+            ""
+        ], 
+        "opacityG": [
+            "opacityMapG", 
+            ""
+        ], 
+        "opacityR": [
+            "opacityMapR", 
+            ""
+        ], 
+        "outColor": [
+            "outColor", 
+            ""
+        ], 
+        "outColorB": [
+            "outColorB", 
+            ""
+        ], 
+        "outColorG": [
+            "outColorG", 
+            ""
+        ], 
+        "outColorR": [
+            "outColorR", 
+            ""
+        ], 
+        "outTransparency": [
+            "outTransparency", 
+            ""
+        ], 
+        "outTransparencyB": [
+            "outTransparencyB", 
+            ""
+        ], 
+        "outTransparencyG": [
+            "outTransparencyG", 
+            ""
+        ], 
+        "outTransparencyR": [
+            "outTransparencyR", 
+            ""
+        ], 
+        "specular": [
+            "reflectionColorAmount", 
+            ""
+        ], 
+        "specularColor": [
+            "reflectionColor", 
+            ""
+        ], 
+        "specularColorB": [
+            "reflectionColorB", 
+            ""
+        ], 
+        "specularColorG": [
+            "reflectionColorG", 
+            ""
+        ], 
+        "specularColorR": [
+            "reflectionColorR", 
+            ""
+        ], 
+        "specularRoughness": [
+            "reflectionGlossiness", 
+            "Inverse"
+        ], 
+        "transmission": [
+            "refractionColorAmount", 
+            ""
+        ], 
+        "transmissionColor": [
+            "refractionColor", 
+            ""
+        ], 
+        "transmissionColorB": [
+            "refractionColorB", 
+            ""
+        ], 
+        "transmissionColorG": [
+            "refractionColorG", 
+            ""
+        ], 
+        "transmissionColorR": [
+            "refractionColorR", 
+            ""
+        ], 
+        "transmissionExtraRoughness": [
+            "refractionGlossiness", 
+            "Inverse"
+        ]
+    }, 
+    "renderer": [
+        "arnold", 
+        "vray"
+    ]
+}
