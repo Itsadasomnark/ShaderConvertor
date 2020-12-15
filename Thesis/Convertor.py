@@ -246,7 +246,15 @@ class ShaderConvert():
                                                     bump = mc.listConnections('%s.%s'%(new_shader[old],data[n_type][b][0]))
                                                     bump_con = mc.listConnections(bump,d=False, s=True)
                                                     mc.disconnectAttr(con[0],'%s.%s'%(new_shader[old],data[n_type][b][0]))
+                                                    mc.delete(bump[0]) 
                                                     mc.connectAttr('%s.outColor'%bump_con[0],'%s.%s'%(new_shader[old],data[n_type][b][0]))
+                                            if 'vray' == data['renderer'][0]:
+                                                if b == 'bumpMap':
+                                                    bump = mc.listConnections('%s.%s'%(new_shader[old],data[n_type][b][0]))
+                                                    bump2d = mc.shadingNode('bump2d',asUtility=1,n='%s_bump2d'%bump[0])
+                                                    mc.connectAttr('%s.outAlpha'%bump[0],'%s.bumpValue'%bump2d)
+                                                    mc.disconnectAttr(con[0],'%s.%s'%(new_shader[old],data[n_type][b][0]))
+                                                    mc.connectAttr('%s.outNormal'%bump2d,'%s.%s'%(new_shader[old],data[n_type][b][0]))
                                     else:
                                         pass
 
