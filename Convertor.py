@@ -49,7 +49,7 @@ class ShaderConvert():
         mat_name = []
         if sl:
             for o in sl:
-                shape = mc.listRelatives(o, shapes=True)
+                shape = mc.listRelatives(o, shapes=True,pa=True)
                 shadeEng = mc.listConnections(shape,type = 'shadingEngine')
                 materials = mc.ls(mc.listConnections(shadeEng), materials = True)
                 node_connect = mc.listConnections(materials,d=True, s=False, p=True)
@@ -75,9 +75,9 @@ class ShaderConvert():
             json.dump(data, jsonfile,sort_keys=True,indent=4)
 
     def get_out_attr(self,node,data,in_attr):
+        out_attr = []
         try:
             node_attr = data[node]
-            out_attr = []
             for i in range(len(in_attr)):
                 out_attr.append(node_attr[in_attr[i]])
         except:
@@ -93,12 +93,11 @@ class ShaderConvert():
         mc.SelectAllGeometry()
         sl = mc.ls(sl=1)
         check = mc.ls(sl=1)
-        shd = mc.listRelatives(sl, shapes=True)
-        for i in sl:
-            shd = mc.listRelatives(i, shapes=True)
+        for i in range(len(sl)):
+            shd = mc.listRelatives(sl[i], shapes=True,pa=True)
             w = mc.listConnections(shd,type = 'shadingEngine')
             if w == None:
-                check.remove(i)
+                check.remove(sl[i])
         return check
 
     def del_old_shd(self,shader,sg):
@@ -116,18 +115,21 @@ class ShaderConvert():
         for i in range(len(materials)):
             if materials[i] not in shader:
                 shader.append(materials[i])
+        for e in range(len(sl)):
+            shape = mc.listRelatives(sl[e], shapes=True,pa=True)
+            shadeEng = mc.listConnections(shape,type = 'shadingEngine')
+            mat = mc.ls(mc.listConnections(shadeEng), materials = True)
             for j in range(len(shader)):
-                if materials[i] == shader[j]:
-                    if shader[j] in shader_list:
-                        shader_list[shader[j]].append(sl[i])
-                    else:
-                        pass
-                        shader_list[shader[j]]=[sl[i]]
+                if shader[j] in shader_list:
+                    if shader[j] == mat[0]:
+                        shader_list[shader[j]].append(sl[e])
+                else:
+                    if shader[j] == mat[0]:
+                        shader_list[shader[j]]=[sl[e]]
         return shader_list
     
     def covert(self,data):
         sl = self.get_obj()
-        chack_sl = self.get_obj()
         materials = self.get_shader_for_obj(sl)
         chack_mat = self.get_shader_for_obj(sl)
         node_Type = []
@@ -138,16 +140,16 @@ class ShaderConvert():
             node_Type.append(mc.nodeType(chack_mat[i]))
             if node_Type[i] not in data.keys():
                 materials.remove(chack_mat[i])
-                sl.remove(chack_sl[i])
         ######################################## Create shader ############################################################         
         for i in range(len(materials)):
             attr_shader = {}
             node_Type.append(mc.nodeType(materials[i]))
             if node_Type[i] in data.keys():
+                print node_Type[i]
                 attr_shader = data[node_Type[i]]
+                new_name = '%s_%s'%(materials[i],data[node_Type[i]][node_Type[i]][0])
             in_attr = attr_shader.keys()
             out_attr = self.get_out_attr(node_Type[i],data,in_attr)
-            new_name = '%s_%s'%(materials[i],data[node_Type[i]][node_Type[i]][0])
             shader_his = mc.listHistory(materials[i])
             shader_his.remove(materials[i])
             if materials[i] not in shader:
@@ -215,9 +217,6 @@ class ShaderConvert():
                     sg_connect = mc.listConnections('%s.displacementShader'%mat_sg[0],  d=False, s=True, p=True)
                     if sg_connect != None:
                         mc.connectAttr(sg_connect[0],'%s.displacementShader'%shdSG )
-            for j in range(len(shader)):
-                if materials[i] == shader[j]:
-                    self.re_assign(sl[i],shdSG_list[j])
         
         ##########################connect node##################################################################################
 
@@ -259,6 +258,13 @@ class ShaderConvert():
                                         pass
 
         #######################################################################################################################                                
+        for obj in range(len(sl)):
+                for j in range(len(shader)):
+                    a = mc.listRelatives(sl[obj], shapes=True,pa=True)
+                    b = mc.listConnections(a,type = 'shadingEngine')
+                    c = mc.ls(mc.listConnections(b), materials = True)
+                    if c[0] == shader[j]:
+                        self.re_assign(sl[obj],shdSG_list[j])
         sg = []
         for h in shader:
             s = mc.listConnections('%s.outColor'%h,s=False, d=True)
