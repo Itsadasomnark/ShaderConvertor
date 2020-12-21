@@ -136,15 +136,12 @@ class ShaderConvert():
         shader = []
         shdSG_list = []
         new_shader = []
-        for i in range(len(chack_mat)):
-            node_Type.append(mc.nodeType(chack_mat[i]))
-            if node_Type[i] not in data.keys():
-                materials.remove(chack_mat[i])
         ######################################## Create shader ############################################################         
         for i in range(len(materials)):
             attr_shader = {}
             node_Type.append(mc.nodeType(materials[i]))
             if node_Type[i] in data.keys():
+                print node_Type[i]
                 attr_shader = data[node_Type[i]]
                 new_name = '%s_%s'%(materials[i],data[node_Type[i]][node_Type[i]][0])
                 in_attr = attr_shader.keys()
@@ -216,8 +213,8 @@ class ShaderConvert():
                         sg_connect = mc.listConnections('%s.displacementShader'%mat_sg[0],  d=False, s=True, p=True)
                         if sg_connect != None:
                             mc.connectAttr(sg_connect[0],'%s.displacementShader'%shdSG )
-            
-            ##########################connect node##################################################################################
+        
+        ##########################connect node##################################################################################
 
         for old in range(len(shader)):
             n_type = mc.nodeType(shader[old])
