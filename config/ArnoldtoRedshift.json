@@ -320,24 +320,28 @@
             "refl_roughness", 
             ""
         ], 
+        "subsurface": [
+            "ms_weight0", 
+            ""
+        ], 
         "subsurfaceColor": [
-            "ss_extinction_coeff", 
+            "ms_color0", 
             ""
         ], 
         "subsurfaceColorB": [
-            "ss_extinction_coeffB", 
+            "ms_color0B", 
             ""
         ], 
         "subsurfaceColorG": [
-            "ss_extinction_coeffG", 
+            "ms_color0G", 
             ""
         ], 
         "subsurfaceColorR": [
-            "ss_extinction_coeffR", 
+            "ms_color0R", 
             ""
         ], 
         "subsurfaceScale": [
-            "ss_extinction_scale", 
+            "ms_radius_scale", 
             ""
         ], 
         "transmission": [
