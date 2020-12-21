@@ -145,80 +145,79 @@ class ShaderConvert():
             attr_shader = {}
             node_Type.append(mc.nodeType(materials[i]))
             if node_Type[i] in data.keys():
-                print node_Type[i]
                 attr_shader = data[node_Type[i]]
                 new_name = '%s_%s'%(materials[i],data[node_Type[i]][node_Type[i]][0])
-            in_attr = attr_shader.keys()
-            out_attr = self.get_out_attr(node_Type[i],data,in_attr)
-            shader_his = mc.listHistory(materials[i])
-            shader_his.remove(materials[i])
-            if materials[i] not in shader:
-                shd = mc.shadingNode(data[node_Type[i]][node_Type[i]][0], asShader=1, name = new_name)
-                shdSG = mc.sets(name='%sSG' % shd, empty=True, renderable=True, noSurfaceShader=True)
-                shdSG_list.append(shdSG)
-                mc.connectAttr('%s.outColor' % shd, '%s.surfaceShader' % shdSG)
-                shader.append(materials[i])
-                new_shader.append(new_name)
-                for g in range(len(in_attr)):
-                    if in_attr[g] != node_Type[i]:
-                        get_vel = mc.getAttr('%s.%s'%(materials[i],in_attr[g]))
-                        if "Inverse" in out_attr[g]:
-                            get_vel = 1.0-get_vel
-                        try:
-                            set_vel = mc.setAttr('%s.%s'%(new_name,out_attr[g][0]),get_vel)
-                            if 'redshift' == data['renderer'][1]:
-                                mc.setAttr('%s.refl_fresnel_mode'%new_name,2)
-                                mc.setAttr('%s.refl_brdf'%new_name,1)
-                        except:
+                in_attr = attr_shader.keys()
+                out_attr = self.get_out_attr(node_Type[i],data,in_attr)
+                shader_his = mc.listHistory(materials[i])
+                shader_his.remove(materials[i])
+                if materials[i] not in shader:
+                    shd = mc.shadingNode(data[node_Type[i]][node_Type[i]][0], asShader=1, name = new_name)
+                    shdSG = mc.sets(name='%sSG' % shd, empty=True, renderable=True, noSurfaceShader=True)
+                    shdSG_list.append(shdSG)
+                    mc.connectAttr('%s.outColor' % shd, '%s.surfaceShader' % shdSG)
+                    shader.append(materials[i])
+                    new_shader.append(new_name)
+                    for g in range(len(in_attr)):
+                        if in_attr[g] != node_Type[i]:
+                            get_vel = mc.getAttr('%s.%s'%(materials[i],in_attr[g]))
+                            if "Inverse" in out_attr[g]:
+                                get_vel = 1.0-get_vel
                             try:
-                                set_vel = mc.setAttr('%s.%s'%(new_name,out_attr[g][0]),get_vel,get_vel,get_vel,type='double3')
+                                set_vel = mc.setAttr('%s.%s'%(new_name,out_attr[g][0]),get_vel)
+                                if 'redshift' == data['renderer'][1]:
+                                    mc.setAttr('%s.refl_fresnel_mode'%new_name,2)
+                                    mc.setAttr('%s.refl_brdf'%new_name,1)
                             except:
-                                pass
+                                try:
+                                    set_vel = mc.setAttr('%s.%s'%(new_name,out_attr[g][0]),get_vel,get_vel,get_vel,type='double3')
+                                except:
+                                    pass
 
-                        mat_connect = mc.listConnections('%s.%s'%(materials[i],in_attr[g]),d=False, s=True, p=True)
-        ################################################# create shader child ################################################
-                        if mat_connect != None:
-                            for j in range(len(shader_his)):
-                                name_node_con = shader_his[j]
-                                node_connect = mc.listConnections(name_node_con,d=True, s=False, p=True)
-                                Type_node_con = mc.nodeType(name_node_con)
-                                if Type_node_con in data.keys():
-                                    attr_shader_in = data[Type_node_con]
-                                    in_attr_in = attr_shader_in.keys()
-                                    out_attr_in = self.get_out_attr(Type_node_con,data,in_attr_in)
-                                    new_name_in = '%s_%s'%(name_node_con,data[Type_node_con][Type_node_con][0])
-                                    if name_node_con not in shader:
-                                        shd = mc.shadingNode(data[Type_node_con][Type_node_con][0], asShader=1, name = new_name_in)
-                                        shdSG = mc.sets(name='%sSG' % shd, empty=True, renderable=True, noSurfaceShader=True)
-                                        shdSG_list.append(shdSG)
-                                        mc.connectAttr('%s.outColor' % shd, '%s.surfaceShader' % shdSG)
-                                        for f in range(len(in_attr_in)):
-                                            if in_attr_in[f] != Type_node_con:
-                                                get_vel_in = mc.getAttr('%s.%s'%(name_node_con,in_attr_in[f]))
-                                                if "Inverse" in out_attr_in[f]:
-                                                    get_vel_in = 1.0 - get_vel_in
-                                                try:
-                                                    set_vel_in = mc.setAttr('%s.%s'%(new_name_in,out_attr_in[f][0]),get_vel_in)
-                                                    if 'redshift' == data['renderer'][1]:
-                                                        mc.setAttr('%s.refl_fresnel_mode'%new_name_in,2)
-                                                        mc.setAttr('%s.refl_brdf'%new_name_in,1)
-                                                except:
-                                                    pass
-                                                check_connect = mc.listConnections('%s.%s'%(name_node_con,in_attr_in[f]),d=False, s=True, p=True)
-                                        
-                                        
-                                        new_shader.append(new_name_in)
-                                        shader.append(name_node_con)
+                            mat_connect = mc.listConnections('%s.%s'%(materials[i],in_attr[g]),d=False, s=True, p=True)
+            ################################################# create shader child ################################################
+                            if mat_connect != None:
+                                for j in range(len(shader_his)):
+                                    name_node_con = shader_his[j]
+                                    node_connect = mc.listConnections(name_node_con,d=True, s=False, p=True)
+                                    Type_node_con = mc.nodeType(name_node_con)
+                                    if Type_node_con in data.keys():
+                                        attr_shader_in = data[Type_node_con]
+                                        in_attr_in = attr_shader_in.keys()
+                                        out_attr_in = self.get_out_attr(Type_node_con,data,in_attr_in)
+                                        new_name_in = '%s_%s'%(name_node_con,data[Type_node_con][Type_node_con][0])
+                                        if name_node_con not in shader:
+                                            shd = mc.shadingNode(data[Type_node_con][Type_node_con][0], asShader=1, name = new_name_in)
+                                            shdSG = mc.sets(name='%sSG' % shd, empty=True, renderable=True, noSurfaceShader=True)
+                                            shdSG_list.append(shdSG)
+                                            mc.connectAttr('%s.outColor' % shd, '%s.surfaceShader' % shdSG)
+                                            for f in range(len(in_attr_in)):
+                                                if in_attr_in[f] != Type_node_con:
+                                                    get_vel_in = mc.getAttr('%s.%s'%(name_node_con,in_attr_in[f]))
+                                                    if "Inverse" in out_attr_in[f]:
+                                                        get_vel_in = 1.0 - get_vel_in
+                                                    try:
+                                                        set_vel_in = mc.setAttr('%s.%s'%(new_name_in,out_attr_in[f][0]),get_vel_in)
+                                                        if 'redshift' == data['renderer'][1]:
+                                                            mc.setAttr('%s.refl_fresnel_mode'%new_name_in,2)
+                                                            mc.setAttr('%s.refl_brdf'%new_name_in,1)
+                                                    except:
+                                                        pass
+                                                    check_connect = mc.listConnections('%s.%s'%(name_node_con,in_attr_in[f]),d=False, s=True, p=True)
+                                            
+                                            
+                                            new_shader.append(new_name_in)
+                                            shader.append(name_node_con)
 
-                mat_sg = mc.listConnections('%s.outColor'%materials[i], d=True, s=False)
-                sg_type = mc.nodeType(mat_sg[0])
-        ############################################### displacement connect#################################################
-                if sg_type == 'shadingEngine':
-                    sg_connect = mc.listConnections('%s.displacementShader'%mat_sg[0],  d=False, s=True, p=True)
-                    if sg_connect != None:
-                        mc.connectAttr(sg_connect[0],'%s.displacementShader'%shdSG )
-        
-        ##########################connect node##################################################################################
+                    mat_sg = mc.listConnections('%s.outColor'%materials[i], d=True, s=False)
+                    sg_type = mc.nodeType(mat_sg[0])
+            ############################################### displacement connect#################################################
+                    if sg_type == 'shadingEngine':
+                        sg_connect = mc.listConnections('%s.displacementShader'%mat_sg[0],  d=False, s=True, p=True)
+                        if sg_connect != None:
+                            mc.connectAttr(sg_connect[0],'%s.displacementShader'%shdSG )
+            
+            ##########################connect node##################################################################################
 
         for old in range(len(shader)):
             n_type = mc.nodeType(shader[old])
