@@ -338,8 +338,8 @@ class Editor(QtWidgets.QMainWindow):
 					item.setText(1,data[i][vel][0])
 		self.eui.Renderer_comboBox_1.setCurrentText(data['renderer'][0])
 		self.eui.Renderer_comboBox_2.setCurrentText(data['renderer'][1])
-		self.eui.Renderer_comboBox_1.setDisabled(False)
-		self.eui.Renderer_comboBox_2.setDisabled(False)
+		self.eui.Renderer_comboBox_1.setEnabled(False)
+		self.eui.Renderer_comboBox_2.setEnabled(False)
 
 	def check_info(self):
 		count_convert = self.eui.Convert_info_tree.topLevelItemCount()
