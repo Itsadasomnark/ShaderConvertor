@@ -218,6 +218,7 @@ class ShaderConvert():
 
         for old in range(len(shader)):
             n_type = mc.nodeType(shader[old])
+            print shader[old]
             if n_type in data.keys():
                 for b in data[n_type]:
                     if b != n_type:
