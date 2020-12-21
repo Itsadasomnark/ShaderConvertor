@@ -195,6 +195,7 @@ class Editor(QtWidgets.QMainWindow):
 		sel.setText(2,"Inverse")
 
 	def add_to_cov(self):
+		self.font = QtGui.QFont()
 		self.eui.Convert_info_tree.expandAll()
 		info_1 = self.eui.Info_renderer_Tree_1.currentItem()
 		info_2 = self.eui.Info_renderer_Tree_2.currentItem()
