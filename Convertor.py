@@ -141,7 +141,6 @@ class ShaderConvert():
             attr_shader = {}
             node_Type.append(mc.nodeType(materials[i]))
             if node_Type[i] in data.keys():
-                print node_Type[i]
                 attr_shader = data[node_Type[i]]
                 new_name = '%s_%s'%(materials[i],data[node_Type[i]][node_Type[i]][0])
                 in_attr = attr_shader.keys()
@@ -218,13 +217,13 @@ class ShaderConvert():
 
         for old in range(len(shader)):
             n_type = mc.nodeType(shader[old])
-            print shader[old]
             if n_type in data.keys():
                 for b in data[n_type]:
                     if b != n_type:
                         con = mc.listConnections('%s.%s'%(shader[old],b),d=False,s=True,p=True)
                         if con != None:
                             n_con = con[0].split('.')[0]
+
                             for d in range(len(new_shader)):
                                 if n_con == shader[d]:
                                     if mc.listConnections('%s.%s'%(new_shader[old],data[n_type][b][0])) == None:
@@ -241,9 +240,10 @@ class ShaderConvert():
                                                 if data[n_type][b][0] == 'bumpMap':
                                                     bump = mc.listConnections('%s.%s'%(new_shader[old],data[n_type][b][0]))
                                                     bump_con = mc.listConnections(bump,d=False, s=True)
+                                                    get_bump = mc.getAttr('%s.bumpDepth'%bump[0])
                                                     mc.disconnectAttr(con[0],'%s.%s'%(new_shader[old],data[n_type][b][0]))
-                                                    mc.delete(bump[0]) 
                                                     mc.connectAttr('%s.outColor'%bump_con[0],'%s.%s'%(new_shader[old],data[n_type][b][0]))
+                                                    mc.setAttr('%s.bumpMult'%new_shader[old],get_bump)
                                             if 'vray' == data['renderer'][0]:
                                                 if b == 'bumpMap':
                                                     bump = mc.listConnections('%s.%s'%(new_shader[old],data[n_type][b][0]))
@@ -251,6 +251,9 @@ class ShaderConvert():
                                                     mc.connectAttr('%s.outAlpha'%bump[0],'%s.bumpValue'%bump2d)
                                                     mc.disconnectAttr(con[0],'%s.%s'%(new_shader[old],data[n_type][b][0]))
                                                     mc.connectAttr('%s.outNormal'%bump2d,'%s.%s'%(new_shader[old],data[n_type][b][0]))
+                                                    get_bump = mc.getAttr('%s.bumpMult'%shader[old])
+                                                    mc.setAttr('%s.bumpDepth'%bump2d,get_bump)
+
                                     else:
                                         pass
 
