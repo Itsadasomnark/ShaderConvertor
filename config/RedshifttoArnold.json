@@ -265,24 +265,28 @@
             "input1R", 
             ""
         ], 
-        "blendColor2": [
+        "blendColor1": [
             "mix2", 
             ""
         ], 
-        "blendColor3": [
+        "blendColor2": [
             "mix3", 
             ""
         ], 
-        "blendColor4": [
+        "blendColor3": [
             "mix4", 
             ""
         ], 
-        "blendColor5": [
+        "blendColor4": [
             "mix5", 
             ""
         ], 
-        "blendColor6": [
+        "blendColor5": [
             "mix6", 
+            ""
+        ], 
+        "blendColor6": [
+            "mix7", 
             ""
         ], 
         "layerColor1": [
@@ -299,6 +303,86 @@
         ], 
         "layerColor1R": [
             "input2R", 
+            ""
+        ], 
+        "layerColor2": [
+            "input3", 
+            ""
+        ], 
+        "layerColor2B": [
+            "input3B", 
+            ""
+        ], 
+        "layerColor2G": [
+            "input3G", 
+            ""
+        ], 
+        "layerColor2R": [
+            "input3R", 
+            ""
+        ], 
+        "layerColor3": [
+            "input4", 
+            ""
+        ], 
+        "layerColor3B": [
+            "input4B", 
+            ""
+        ], 
+        "layerColor3G": [
+            "input4G", 
+            ""
+        ], 
+        "layerColor3R": [
+            "input4R", 
+            ""
+        ], 
+        "layerColor4": [
+            "input5", 
+            ""
+        ], 
+        "layerColor4B": [
+            "input5B", 
+            ""
+        ], 
+        "layerColor4G": [
+            "input5G", 
+            ""
+        ], 
+        "layerColor4R": [
+            "input5R", 
+            ""
+        ], 
+        "layerColor5": [
+            "input6", 
+            ""
+        ], 
+        "layerColor5B": [
+            "input6B", 
+            ""
+        ], 
+        "layerColor5G": [
+            "input6G", 
+            ""
+        ], 
+        "layerColor5R": [
+            "input6R", 
+            ""
+        ], 
+        "layerColor6": [
+            "input7", 
+            ""
+        ], 
+        "layerColor6B": [
+            "input7B", 
+            ""
+        ], 
+        "layerColor6G": [
+            "input7G", 
+            ""
+        ], 
+        "layerColor6R": [
+            "input7R", 
             ""
         ], 
         "outColor": [
