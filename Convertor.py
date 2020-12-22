@@ -232,7 +232,8 @@ class ShaderConvert():
                             for d in range(len(new_shader)):
                                 if n_con == shader[d]:
                                     if mc.listConnections('%s.%s'%(new_shader[old],data[n_type][b][0])) == None:
-                                        mc.setAttr('%s.enable%s'%(new_shader[old],data[n_type][b][0][-1]),1)
+                                        if mc.nodeType(new_shader[old]) == 'aiLayerShader':
+                                            mc.setAttr('%s.enable%s'%(new_shader[old],data[n_type][b][0][-1]),1)
                                         mc.connectAttr('%s.%s'%(new_shader[d],con[0].split('.')[1]) , '%s.%s'%(new_shader[old],data[n_type][b][0]))
                                 if n_con not in shader:
                                     if mc.listConnections('%s.%s'%(new_shader[old],data[n_type][b][0])) == None:
