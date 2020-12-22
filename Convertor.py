@@ -165,6 +165,12 @@ class ShaderConvert():
                                     mc.setAttr('%s.refl_fresnel_mode'%new_name,2)
                                     mc.setAttr('%s.refl_brdf'%new_name,1)
                             except:
+                                if data[node_Type[i]][node_Type[i]][0] == 'aiLayerShader':
+                                    a = list(get_vel[0])[0]
+                                    try:
+                                        set_vel = mc.setAttr('%s.%s'%(new_name,out_attr[g][0]),a)
+                                    except:
+                                        pass
                                 try:
                                     set_vel = mc.setAttr('%s.%s'%(new_name,out_attr[g][0]),get_vel,get_vel,get_vel,type='double3')
                                 except:
@@ -223,10 +229,10 @@ class ShaderConvert():
                         con = mc.listConnections('%s.%s'%(shader[old],b),d=False,s=True,p=True)
                         if con != None:
                             n_con = con[0].split('.')[0]
-
                             for d in range(len(new_shader)):
                                 if n_con == shader[d]:
                                     if mc.listConnections('%s.%s'%(new_shader[old],data[n_type][b][0])) == None:
+                                        mc.setAttr('%s.enable%s'%(new_shader[old],data[n_type][b][0][-1]),1)
                                         mc.connectAttr('%s.%s'%(new_shader[d],con[0].split('.')[1]) , '%s.%s'%(new_shader[old],data[n_type][b][0]))
                                 if n_con not in shader:
                                     if mc.listConnections('%s.%s'%(new_shader[old],data[n_type][b][0])) == None:
