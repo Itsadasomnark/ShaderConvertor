@@ -213,14 +213,12 @@ class ShaderConvert():
 
                     mat_sg = mc.listConnections('%s.outColor'%materials[i], d=True, s=False)
                     sg_type = mc.nodeType(mat_sg[0])
-            ############################################### displacement connect#################################################
+############################################### displacement connect#################################################
                     if sg_type == 'shadingEngine':
                         sg_connect = mc.listConnections('%s.displacementShader'%mat_sg[0],  d=False, s=True, p=True)
                         if sg_connect != None:
                             mc.connectAttr(sg_connect[0],'%s.displacementShader'%shdSG )
-        
-        ##########################connect node##################################################################################
-
+#############################################connect node##################################################################
         for old in range(len(shader)):
             n_type = mc.nodeType(shader[old])
             if n_type in data.keys():
