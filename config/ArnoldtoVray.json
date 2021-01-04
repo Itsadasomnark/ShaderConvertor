@@ -117,163 +117,191 @@
             "VRayBlendMtl"
         ], 
         "input1": [
-            "coat_material_0", 
+            "base_material", 
             ""
         ], 
         "input1B": [
-            "coat_material_0B", 
+            "base_materialB", 
             ""
         ], 
         "input1G": [
-            "coat_material_0G", 
+            "base_materialG", 
             ""
         ], 
         "input1R": [
-            "coat_material_0R", 
+            "base_materialR", 
             ""
         ], 
         "input2": [
-            "coat_material_1", 
+            "coat_material_0", 
             ""
         ], 
         "input2B": [
-            "coat_material_1B", 
+            "coat_material_0B", 
             ""
         ], 
         "input2G": [
-            "coat_material_1G", 
+            "coat_material_0G", 
             ""
         ], 
         "input2R": [
-            "coat_material_1R", 
+            "coat_material_0R", 
             ""
         ], 
         "input3": [
-            "coat_material_2", 
+            "coat_material_1", 
             ""
         ], 
         "input3B": [
-            "coat_material_2B", 
+            "coat_material_1B", 
             ""
         ], 
         "input3G": [
-            "coat_material_2G", 
+            "coat_material_1G", 
             ""
         ], 
         "input3R": [
-            "coat_material_2R", 
+            "coat_material_1R", 
             ""
         ], 
         "input4": [
-            "coat_material_3", 
+            "coat_material_2", 
             ""
         ], 
         "input4B": [
-            "coat_material_3B", 
+            "coat_material_2B", 
             ""
         ], 
         "input4G": [
-            "coat_material_3G", 
+            "coat_material_2G", 
             ""
         ], 
         "input4R": [
-            "coat_material_3R", 
+            "coat_material_2R", 
             ""
         ], 
         "input5": [
-            "coat_material_4", 
+            "coat_material_3", 
             ""
         ], 
         "input5B": [
-            "coat_material_4B", 
+            "coat_material_3B", 
             ""
         ], 
         "input5G": [
-            "coat_material_4G", 
+            "coat_material_3G", 
             ""
         ], 
         "input5R": [
-            "coat_material_4R", 
+            "coat_material_3R", 
             ""
         ], 
         "input6": [
-            "coat_material_5", 
+            "coat_material_4", 
             ""
         ], 
         "input6B": [
-            "coat_material_5B", 
+            "coat_material_4B", 
             ""
         ], 
         "input6G": [
-            "coat_material_5G", 
+            "coat_material_4G", 
             ""
         ], 
         "input6R": [
-            "coat_material_5R", 
+            "coat_material_4R", 
             ""
         ], 
         "input7": [
-            "coat_material_6", 
+            "coat_material_5", 
             ""
         ], 
         "input7B": [
-            "coat_material_6B", 
+            "coat_material_5B", 
             ""
         ], 
         "input7G": [
-            "coat_material_6G", 
+            "coat_material_5G", 
             ""
         ], 
         "input7R": [
-            "coat_material_6R", 
+            "coat_material_5R", 
             ""
         ], 
         "input8": [
-            "coat_material_7", 
+            "coat_material_6", 
             ""
         ], 
         "input8B": [
-            "coat_material_7B", 
+            "coat_material_6B", 
             ""
         ], 
         "input8G": [
-            "coat_material_7G", 
+            "coat_material_6G", 
             ""
         ], 
         "input8R": [
-            "coat_material_7R", 
-            ""
-        ], 
-        "mix1": [
-            "blend_amount_0", 
+            "coat_material_6R", 
             ""
         ], 
         "mix2": [
-            "blend_amount_1", 
+            "blend_amount_0", 
             ""
         ], 
         "mix3": [
-            "blend_amount_2", 
+            "blend_amount_1", 
             ""
         ], 
         "mix4": [
-            "blend_amount_3", 
+            "blend_amount_2", 
             ""
         ], 
         "mix5": [
-            "blend_amount_4", 
+            "blend_amount_3", 
             ""
         ], 
         "mix6": [
-            "blend_amount_5", 
+            "blend_amount_4", 
             ""
         ], 
         "mix7": [
-            "blend_amount_6", 
+            "blend_amount_5", 
             ""
         ], 
         "mix8": [
-            "blend_amount_7", 
+            "blend_amount_6", 
+            ""
+        ], 
+        "outColor": [
+            "outColor", 
+            ""
+        ], 
+        "outColorB": [
+            "outColorB", 
+            ""
+        ], 
+        "outColorG": [
+            "outColorG", 
+            ""
+        ], 
+        "outColorR": [
+            "outColorR", 
+            ""
+        ], 
+        "outTransparency": [
+            "outTransparency", 
+            ""
+        ], 
+        "outTransparencyB": [
+            "outTransparencyB", 
+            ""
+        ], 
+        "outTransparencyG": [
+            "outTransparencyG", 
+            ""
+        ], 
+        "outTransparencyR": [
+            "outTransparencyR", 
             ""
         ]
     }, 
