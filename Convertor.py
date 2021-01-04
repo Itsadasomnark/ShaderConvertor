@@ -240,7 +240,6 @@ class ShaderConvert():
                                             mc.connectAttr('%s'%con[0],'%s.inputX'%reverse)
                                             mc.connectAttr('%s.outputX'%reverse,'%s.%s'%(new_shader[old],data[n_type][b][0]))
                                         else:
-                                            ########################################################################
                                             try:
                                                 mc.connectAttr(con[0],'%s.%s'%(new_shader[old],data[n_type][b][0]))
                                                 if 'vray' == data['renderer'][1]:
