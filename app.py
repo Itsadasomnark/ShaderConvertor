@@ -356,13 +356,13 @@ class Editor(QtWidgets.QMainWindow):
 					self.font.setPointSize(8)
 					self.font.setItalic(True)
 					item1.setFont(0,self.font)
+					item1.setBackgroundColor(0, QtGui.QColor('darkBlue'))
 			for info2 in range(count_info2):
 				item2 = self.eui.Info_renderer_Tree_2.topLevelItem(info2)
 				if top.text(1) == item2.text(0):
 					self.font.setPointSize(8)
 					self.font.setItalic(True)
-					item2.setFont(0,self.font)
-
+					item2.setBackgroundColor(0, QtGui.QColor('darkBlue'))
 class filename_ui(QtWidgets.QMainWindow):
 	"""docstring for filename_ui"""
 	def __init__(self,data, parent=None):
