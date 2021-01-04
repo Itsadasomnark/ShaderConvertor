@@ -248,6 +248,8 @@ class ShaderConvert():
                                                         bump = mc.listConnections('%s.%s'%(new_shader[old],data[n_type][b][0]))
                                                         bump_con = mc.listConnections(bump,d=False, s=True)
                                                         get_bump = mc.getAttr('%s.bumpDepth'%bump[0])
+                                                        if data['renderer'][0] == 'redshift':
+                                                            get_bump = get_bump*3.0
                                                         mc.disconnectAttr(con[0],'%s.%s'%(new_shader[old],data[n_type][b][0]))
                                                         mc.connectAttr('%s.outColor'%bump_con[0],'%s.%s'%(new_shader[old],data[n_type][b][0]))
                                                         mc.setAttr('%s.bumpMult'%new_shader[old],get_bump)
@@ -259,6 +261,8 @@ class ShaderConvert():
                                                         mc.disconnectAttr(con[0],'%s.%s'%(new_shader[old],data[n_type][b][0]))
                                                         mc.connectAttr('%s.outNormal'%bump2d,'%s.%s'%(new_shader[old],data[n_type][b][0]))
                                                         get_bump = mc.getAttr('%s.bumpMult'%shader[old])
+                                                        if data['renderer'][1] == 'redshift':
+                                                            get_bump = get_bump/3.0
                                                         mc.setAttr('%s.bumpDepth'%bump2d,get_bump)
                                             except:
                                                 if 'arnold' == data['renderer'][1]:
