@@ -242,7 +242,6 @@ class ShaderConvert():
                                             mc.connectAttr('%s'%con[0],'%s.inputX'%reverse)
                                             mc.connectAttr('%s.outputX'%reverse,'%s.%s'%(new_shader[old],data[n_type][b][0]))
                                         else:
-                                            #############
                                             mc.connectAttr(con[0],'%s.%s'%(new_shader[old],data[n_type][b][0]))
                                             if 'vray' == data['renderer'][1]:
                                                 if data[n_type][b][0] == 'bumpMap':
@@ -268,10 +267,10 @@ class ShaderConvert():
         #######################################################################################################################                                
         for obj in range(len(sl)):
                 for j in range(len(shader)):
-                    a = mc.listRelatives(sl[obj], shapes=True,pa=True)
-                    b = mc.listConnections(a,type = 'shadingEngine')
-                    c = mc.ls(mc.listConnections(b), materials = True)
-                    if c[0] == shader[j]:
+                    listRe = mc.listRelatives(sl[obj], shapes=True,pa=True)
+                    con_shdE = mc.listConnections(listRe,type = 'shadingEngine')
+                    sel_con = mc.ls(mc.listConnections(con_shdE), materials = True)
+                    if sel_con[0] == shader[j]:
                         self.re_assign(sl[obj],shdSG_list[j])
         sg = []
         for h in shader:
