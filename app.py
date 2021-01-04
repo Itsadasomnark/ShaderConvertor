@@ -189,6 +189,7 @@ class Editor(QtWidgets.QMainWindow):
 			child = sel_root.child(i)
 			if child.text(0) == sel.text(0):
 				sel_root.takeChild(i)
+		self.check_info()
 				
 	def add_Invesre(self):
 		sel = self.eui.Convert_info_tree.currentItem()
@@ -243,7 +244,8 @@ class Editor(QtWidgets.QMainWindow):
 					item.setText(0,info_1.text(0))
 					item.setText(1,info_2.text(0))
 					item.setFont(0,self.font)
-					item.setFont(1,self.font)				
+					item.setFont(1,self.font)
+		self.check_info()				
 
 	def set_info_1(self):
 		renderer = self.cov.get_renderers()
