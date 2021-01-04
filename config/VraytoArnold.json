@@ -19,31 +19,31 @@
             "input1R", 
             ""
         ], 
-        "blend_amount_0R": [
+        "blend_amount_0": [
             "mix2", 
             ""
         ], 
-        "blend_amount_1R": [
+        "blend_amount_1": [
             "mix3", 
             ""
         ], 
-        "blend_amount_2R": [
+        "blend_amount_2": [
             "mix4", 
             ""
         ], 
-        "blend_amount_3R": [
+        "blend_amount_3": [
             "mix5", 
             ""
         ], 
-        "blend_amount_4R": [
+        "blend_amount_4": [
             "mix6", 
             ""
         ], 
-        "blend_amount_5R": [
+        "blend_amount_5": [
             "mix7", 
             ""
         ], 
-        "blend_amount_6R": [
+        "blend_amount_6": [
             "mix8", 
             ""
         ], 
