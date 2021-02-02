@@ -162,7 +162,6 @@ class ShaderConvert():
                             try:
                                 set_vel = mc.setAttr('%s.%s'%(new_name,out_attr[g][0]),get_vel)
                                 if 'redshift' == data['renderer'][1]:
-                                    mc.setAttr('%s.refl_fresnel_mode'%new_name,2)
                                     mc.setAttr('%s.refl_brdf'%new_name,1)
                             except:
                                 if data[node_Type[i]][node_Type[i]][0] == 'aiLayerShader':
@@ -201,7 +200,6 @@ class ShaderConvert():
                                                     try:
                                                         set_vel_in = mc.setAttr('%s.%s'%(new_name_in,out_attr_in[f][0]),get_vel_in)
                                                         if 'redshift' == data['renderer'][1]:
-                                                            mc.setAttr('%s.refl_fresnel_mode'%new_name_in,2)
                                                             mc.setAttr('%s.refl_brdf'%new_name_in,1)
                                                     except:
                                                         pass
