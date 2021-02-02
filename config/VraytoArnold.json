@@ -192,6 +192,139 @@
             ""
         ]
     }, 
+    "VRayFastSSS2": {
+        "VRayFastSSS2": [
+            "aiStandardSurface"
+        ], 
+        "bumpMap": [
+            "normalCamera", 
+            ""
+        ], 
+        "bumpMapB": [
+            "normalCameraZ", 
+            ""
+        ], 
+        "bumpMapG": [
+            "normalCameraY", 
+            ""
+        ], 
+        "bumpMapR": [
+            "normalCameraX", 
+            ""
+        ], 
+        "diffuseAmount": [
+            "base", 
+            ""
+        ], 
+        "diffuseTex": [
+            "baseColor", 
+            ""
+        ], 
+        "diffuseTexB": [
+            "baseColorB", 
+            ""
+        ], 
+        "diffuseTexG": [
+            "baseColorG", 
+            ""
+        ], 
+        "diffuseTexR": [
+            "baseColorR", 
+            ""
+        ], 
+        "glossiness": [
+            "specularRoughness", 
+            "Inverse"
+        ], 
+        "outColor": [
+            "outColor", 
+            ""
+        ], 
+        "outColorB": [
+            "outColorB", 
+            ""
+        ], 
+        "outColorG": [
+            "outColorG", 
+            ""
+        ], 
+        "outColorR": [
+            "outColorR", 
+            ""
+        ], 
+        "outTransparency": [
+            "outTransparency", 
+            ""
+        ], 
+        "outTransparencyB": [
+            "outTransparencyB", 
+            ""
+        ], 
+        "outTransparencyG": [
+            "outTransparencyG", 
+            ""
+        ], 
+        "outTransparencyR": [
+            "outTransparencyR", 
+            ""
+        ], 
+        "reflection": [
+            "specularColor", 
+            ""
+        ], 
+        "reflectionAmount": [
+            "specular", 
+            ""
+        ], 
+        "reflectionB": [
+            "specularColorB", 
+            ""
+        ], 
+        "reflectionG": [
+            "specularColorG", 
+            ""
+        ], 
+        "reflectionR": [
+            "specularColorR", 
+            ""
+        ], 
+        "scale": [
+            "subsurfaceScale", 
+            ""
+        ], 
+        "scatterRadiusColor": [
+            "subsurfaceRadius", 
+            ""
+        ], 
+        "scatterRadiusColorB": [
+            "subsurfaceRadiusB", 
+            ""
+        ], 
+        "scatterRadiusColorG": [
+            "subsurfaceRadiusG", 
+            ""
+        ], 
+        "scatterRadiusColorR": [
+            "subsurfaceRadiusR", 
+            ""
+        ], 
+        "subsurfaceColor": [
+            "subsurfaceColor", 
+            ""
+        ], 
+        "subsurfaceColorB": [
+            "subsurfaceColorB", 
+            ""
+        ], 
+        "subsurfaceColorG": [
+            "subsurfaceColorG", 
+            ""
+        ], 
+        "subsurfaceColorR": [
+            "subsurfaceColorR", 
+            ""
+        ]
+    }, 
     "VRayMtl": {
         "VRayMtl": [
             "aiStandardSurface"
@@ -230,6 +363,10 @@
         ], 
         "diffuseColorR": [
             "baseColorR", 
+            ""
+        ], 
+        "fresnelIOR": [
+            "specularIOR", 
             ""
         ], 
         "metalness": [
